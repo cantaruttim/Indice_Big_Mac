@@ -1,67 +1,7 @@
-#################################################################
-## AO PREENCHER ESSE CABEC¸ALHO COM O MEU NOME E O MEU N´UMERO USP,
-## DECLARO QUE SOU O ´UNICO AUTOR E RESPONS´AVEL POR ESSE PROGRAMA.
-## TODAS AS PARTES ORIGINAIS DESSE EXERC´ICIO PROGRAMA (EP) FORAM
-## DESENVOLVIDAS E IMPLEMENTADAS POR MIM SEGUINDO AS INSTRUC¸~OES
-## DESSE EP E QUE PORTANTO N~AO CONSTITUEM DESONESTIDADE ACAD^EMICA
-## OU PL´AGIO.
-## DECLARO TAMB´EM QUE SOU RESPONS´AVEL POR TODAS AS C´OPIAS
-## DESSE PROGRAMA E QUE EU N~AO DISTRIBUI OU FACILITEI A
-## SUA DISTRIBUIC¸~AO. ESTOU CIENTE QUE OS CASOS DE PL´AGIO E
-## DESONESTIDADE ACAD^EMICA SER~AO TRATADOS SEGUNDO OS CRIT´ERIOS
-## DIVULGADOS NA P´AGINA DA DISCIPLINA.
-## ENTENDO QUE EPS SEM ESTE CABEC¸ALHO N~AO SER~AO CORRIGIDOS E,
-## AINDA ASSIM, PODER~AO SER PUNIDOS POR DESONESTIDADE ACAD^EMICA.
-## Nome : Milena Borges Ferian
-## NUSP : 14834970
-## Turma: 22
-## Prof.: Roberto Hirata Jr.
-
-
-## Referências: Com exceção das rotinas fornecidas no enunciado
-## e em sala de aula, caso você tenha utilizado alguma referência,
-## liste-as abaixo para que o seu programa não seja considerado
-## plágio ou irregular.
-
-## 1. How to use strsplit() function in R?. Disponível em : https://www.digitalocean.com/community/tutorials/strsplit-function-in-r
-### Acessado em: 23/06/2023
-
-## 2. Como adicionar uma nova coluna de dados no R. Medium. Disponível em : https://medium.com/bio-data-blog/como-adicionar-uma-nova-coluna-de-dados-no-r-29f454f5f771
-### Acessado em: 23/06/2023
-
-## 3. Compactly Display the Structure of an Arbitrary R Object. R Documentation
-
-## 4. Manipulando os Dados. Disponível em: http://sillasgonzaga.com/material/cdr/manipulando-os-dados.html
-### Acessado em 23/06/2023
-
-## 5. Combine R Objects by Rows or Columns. R Documentation
-
-## 6. How to Fix in R: the condition has length > 1 and only the first element will be used.
-### Disponível em : https://www.geeksforgeeks.org/how-to-fix-in-r-the-condition-has-length-1-and-only-the-first-element-will-be-used/.
-### Acessado em : 23/06/2023
-
-## 7. Calculando a soma de uma lista. Disponível em : https://panda.ime.usp.br/panda/static/pythonds_pt/04-Recursao/02-somatoria.html
-### Acessado em : 23/06/2023
-
-## 8. DidaticaTech (2022). Filtro em um data frames no R (Curso para Iniciantes - Aula 15). Disponível em :
-### https://www.youtube.com/watch?v=WSrrTvNZriI. Acessado em : 23/04/2023
-
-## 9. Acervo Lima (2022). CONVERTER LISTA DE LISTAS EM DATAFRAME EM R. Disponível em : https://acervolima.com/converter-lista-de-listas-em-dataframe-em-r/
-### Acessado em : 23/06/2023
-
-## 10. R Documentation (2023). Scatter Plot Smoothing. Disponível em : https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lowess.html
-### Acessado em : 26/06/2023
-
-## 11. EcoR (2020). Criação e Edição de Gráficos no R. Disponível em : http://ecor.ib.usp.br/doku.php?id=03_apostila:05a-graficos#:~:text=Fazer%20gr%C3%A1ficos%20rapidamente%20no%20R,e%20quais%20s%C3%A3o%20as%20vari%C3%A1veis.&text=Ambas%20as%20formas%20s%C3%A3o%20corretas,mais%20f%C3%A1cil%20usar%20y~x.
-### Acessado em : 26/06/2023
-
-
-
-# E6 - Lendo o arquivo .csv no R 
+# Lendo o arquivo .csv no R 
 BigMacData <- read.csv("epData (3).csv", sep = ",")
 # verificando se foi lido corretamente
 ls.str(BigMacData)
-
 
 ## CONFERINDO A IMPORTAÇÃO
 # currencyCode :  chr [1:1868] "ARS" "AUD" ...
@@ -74,18 +14,12 @@ ls.str(BigMacData)
 # name :  chr [1:1868] "Argentina" ...
 
 
-
 # Também podemos visualizar com a função View()
 View(BigMacData)
 # class(BigMacData) data.frame
 
-# E7
 Paises <- unique(sort(BigMacData[, "isoA3"]))
 Paises
-
-### Crie dois outros vetores de agrupamentos de paıses de acordo com algum critério
-### decidido por você. No relatório, justifique a decisão
-
 
 ## Esses países foram separados por Continente
 # Apenas os Nomes - vamos utilizar os valores posterioremente 
@@ -100,6 +34,7 @@ Países.Europa <- c("ITA", "DEU", "DNK", "RUS")
 ## retorna um vetor com o ano de cada coleta do valor do Big Mac
 
 ## ?strsplit
+
 # Criando a função criaVetorAno
 criaVetorAno <- function(D) {
   # cria um vetor vazio
@@ -141,7 +76,7 @@ str(BigMacData) # confirma as classes dos dados
 
 ?ifelse
 
-#E2 Faça uma função BigMacUSPrice que recebe um dataframe D como parâmetro e 
+## E2 Faça uma função BigMacUSPrice que recebe um dataframe D como parâmetro e 
 ## um número inteiro positivo A (que corresponde a um ano) e retorna do valor 
 ## do Big Mac nos Estados Unidos naquele ano.
 
@@ -173,7 +108,7 @@ BigMacUSPrice(BigMacData, 2002) # adicionar o valor de um ano
 ###
 
 
-#E3 Faça uma função mediaColunaPais que recebe como parãmetro um dataframe D,
+## E3 Faça uma função mediaColunaPais que recebe como parãmetro um dataframe D,
 ## um número inteiro positivo C (que corresponde numérica do dataframe) e uma string
 ## de três letras P (que corresponde ao código do país) e retorna a média de todos
 ## os valores da coluna C cujo país é igual a P. Você deve usar a fórmula da média
@@ -215,7 +150,7 @@ mediaColunaPais(BigMacData, BigMacData$localPrice , "BRA")
 ##
 
 
-#E4 Faça uma função varColunaPais que recebe como parâmetro um dataframe D,
+## E4 Faça uma função varColunaPais que recebe como parâmetro um dataframe D,
 ## um número inteiro positivo C (que corresponde a uma coluna numérica do dataframe) e
 ## uma string de três letras P (que corresponde ao código do País) e retorna a variância
 ## de todos os valores da coluna C cujo país é igual a P. Você deve usar a fórmula da variância
@@ -267,7 +202,7 @@ varColunaPais(BigMacData, BigMacData$localPrice , "CHL")
 ##
 
 
-#E5 Faça uma função criaVetorBMI que recebe um dataframe D como parâmetro
+## E5 Faça uma função criaVetorBMI que recebe um dataframe D como parâmetro
 ## e retorna um vetor com índice Big Mac de cada coleta do valor do Big Mac.
 
 criaVetorBMI <- function(D, Pais, A) {
