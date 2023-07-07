@@ -86,18 +86,20 @@ BigMacUSPrice <- function(D, A) {
   
   # Extraindo os valores da coluna isoA3
   vetor_USA <- unlist(BigMacData$isoA3)
-  vetor_USA
+  #vetor_USA
   
   # Extraindo os anos da coluna criaVetorAno()
   vetor_Ano <- unlist(BigMacData$`criaVetorAno()`)
-  vetor_Ano
+  #vetor_Ano
   
   # Extraindo o valor local do Big Mac 
   valor.local <- unlist(BigMacData$localPrice)
-  valor.local
+  #valor.local
   
   # Testando a condicional com vetores
   ifelse(vetor_USA == "USA" & vetor_Ano == A, valor.local, print("-"))
+
+  return valor.local
   
 }
 
